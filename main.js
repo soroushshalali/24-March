@@ -1,38 +1,17 @@
-// function fun1(name, age, add) {
-//     document.write(`mein Name ist ${name} und bin ${age} jahre alt. Ich wohne in ${add}😁`);
-// }
-// fun1("soroush", "28", "mettman");
-
-// fun22 = (name, age, add) =>
-//     document.write(`mein Name ist ${name} und bin ${age} jahre alt. Ich wohne in ${add}😁`);
-
-// fun2 = (name, age, add) => document.write(`mein Name ist ${name} und bin ${age} jahre alt. Ich wohne in ${add}😁`);
-// let i = 1200;
-
-// let bahn = setInterval(() => {
-
-//     document.getElementById("bahn").style.left = i + "px";
-//     if (i == 0) {
-//         clearInterval(bahn);
-//     }
-//     i = i - 100;
-// }, 1000)
 
 // AUF1
 let x = 5000;
 let x2 = x / 1000;
 document.querySelector("#aufgabe1 > h1:nth-of-type(1)").innerHTML = `start warten für ${x2} Sekunden`;
 function func1() {
-    document.querySelector("#aufgabe1 > h1:nth-of-type(2)").innerHTML = `Du hast ${x2} Sekunden verschwindet.`;
+    document.querySelector("#aufgabe1 > h1:nth-of-type(2)").innerHTML = `Du hast ${x2} Sekunden verschwendet.`;
 }
 setTimeout(func1, x)
-
 // AUF2
 setInterval(() => {
     // document.querySelector("#aufgabe2 > h1").innerHTML += `${new Date().getHours()} : ${new Date().getMinutes()} : ${new Date().getSeconds()} <br>`;
     document.querySelector("#aufgabe2 > h1").innerHTML = `${new Date().getHours()} : ${new Date().getMinutes()} : ${new Date().getSeconds()} <br>`;
 }, 1000);
-
 // AUF3
 let i = 0;
 let aufgabe3 = setInterval(() => {
@@ -43,9 +22,7 @@ let aufgabe3 = setInterval(() => {
         document.querySelector("#aufgabe3 > h1").innerHTML += `- 👍🏻 `;
     }
 }, 1000);
-
 // AUF4
-
 function aufgabe4() {
     let j = 100;
     let aufgabe44 = setInterval(() => {
@@ -55,15 +32,15 @@ function aufgabe4() {
             clearInterval(aufgabe44);
         }
     }, 100)
-
 }
-
 // AUF5
-let eingabe = -1;
+let eingabe;
 let k = 59;
 let minutes;
+let counter;
 function startMinCountdown() {
-    if (eingabe == -1) {
+
+    if (eingabe == undefined) {
         eingabe = document.getElementById("minutes").value;
         eingabe--;
     }
@@ -89,15 +66,9 @@ function pauseMinCountdown() {
 function restartMinCountdown() {
     startMinCountdown()
 }
-
-
-
-
-
 let useClassName = document.getElementsByClassName("message");
-console.log(useClassName);
-
 function aufgabe6() {
+    useClassName[0].style.opacity = "1";
     let i = 10;
     let intervalAufgabe6 = setInterval(() => {
         document.getElementById("count").innerHTML = i;
@@ -105,14 +76,12 @@ function aufgabe6() {
         if (i == -1) {
             clearInterval(intervalAufgabe6);
             useClassName[0].style.opacity = "0";
-            i = 10;
-            setTimeout(aufgabe6(), 2000)
+            setTimeout(aufgabe6, 1000);
         }
     }, 1000)
 
 }
 window.onload = aufgabe6();
-
 
 
 

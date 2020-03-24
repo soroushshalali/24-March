@@ -16,12 +16,16 @@
     width: 15%;
     padding: 0;
     text-align: center;
-    float: left;
+    float: right;
 }
 
 body {
     background-color: #ffad87
   }
+
+.style{
+    float: right;
+}
 
 
   .zeit {
